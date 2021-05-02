@@ -1,9 +1,12 @@
 const fs= require('fs');
 const inquirer= require('inquirer');
+const Manager= require('./lib/Manager');
+const Engineer= require('./lib/Engineer');
+const Intern= require('./lib/Intern');
 
-let engineer= [];
-let inter= [];
-let manager= [];
+let engineerArray= [];
+let internArray= [];
+let managerArray= [];
 
 function promptManager() {
     return inquirer.prompt([
@@ -31,6 +34,7 @@ function promptManager() {
 };
 
 function promptEmployee() {
+
     return inquirer.prompt([
         {
             type: 'list',
@@ -66,9 +70,10 @@ function promptEmployee() {
             ])
             .then((answer) => {
                 let engineer= new Engineer(answer.name, answer.id, answer.email, answer.github);
-                engineer.push(answer);
+                engineerArray.push(answer);
                 promptEmployee();
             })
+            
         }
         else if (answerList.role === 'Intern') {
 
@@ -95,11 +100,16 @@ function promptEmployee() {
                 }
             ])
             .then((answer) => {
-                let inter= new Intern(answer.name, answer.id, answer.email, answer.school);
-                inter.push(answer);
+                let intern= new Intern(answer.name, answer.id, answer.email, answer.school);
+                internArray.push(answer);
                 promptEmployee();
             })
+
         }
+    console.log(managerArray);
+    console.log(engineerArray);
+    console.log(internArray);
+    
     })
 }
 

@@ -9,6 +9,7 @@ This application was created to generate a team profile based on user input usin
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
+* [Link](#link)
 
 
 ## Installation
@@ -26,6 +27,7 @@ Run 'npm test' to run Jest for tests on constructors.
 ## Questions
 If you have any questions about this project, please contact me directly at yonihailsh@gmail.com
 
+## Link
 # Link to video
 
 https://drive.google.com/file/d/1Kf9V2tpzGK70ZTe3TIZ8R_euH4l0EI5n/view
